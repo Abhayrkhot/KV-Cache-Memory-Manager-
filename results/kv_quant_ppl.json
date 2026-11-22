@@ -1,0 +1,214 @@
+{
+  "device": "CPU (arm64, Darwin), float32 compute",
+  "torch": "2.15.0",
+  "transformers": "5.24.0",
+  "dataset": "WikiText-2 raw, test split",
+  "window_len": 1024,
+  "chunk": 256,
+  "models": [
+    {
+      "model": "HuggingFaceTB/SmolLM2-135M",
+      "kv_layout": "HuggingFaceTB/SmolLM2-135M: 30 layers (30 full), 3 KV heads x 64",
+      "eval_tokens": 24576,
+      "parity": {
+        "prompts": 8,
+        "new_tokens": 32,
+        "token_match": 1.0,
+        "sequences_identical": 8
+      },
+      "results": [
+        {
+          "kv_format": "fp32",
+          "ppl": 16.532025860009835,
+          "ppl_delta_pct": 0.0,
+          "nll_delta_mean": 0.0,
+          "nll_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "kv_bytes_per_token": 46080.0
+        },
+        {
+          "kv_format": "bf16",
+          "ppl": 16.533052335134656,
+          "ppl_delta_pct": 0.0062090099151257405,
+          "nll_delta_mean": 6.20881716410319e-05,
+          "nll_delta_ci95": [
+            -3.040032356343926e-05,
+            0.00015457666684550307
+          ],
+          "kv_bytes_per_token": 23040.0
+        },
+        {
+          "kv_format": "fp16",
+          "ppl": 16.53189874576531,
+          "ppl_delta_pct": -0.0007688969615782248,
+          "nll_delta_mean": -7.68899917602539e-06,
+          "nll_delta_ci95": [
+            -2.1042280290539377e-05,
+            5.664281938488596e-06
+          ],
+          "kv_bytes_per_token": 23040.0
+        },
+        {
+          "kv_format": "fp8",
+          "ppl": 16.60955211696544,
+          "ppl_delta_pct": 0.46894589696435673,
+          "nll_delta_mean": 0.004678497711817424,
+          "nll_delta_ci95": [
+            0.0030440089443107194,
+            0.006312986479324129
+          ],
+          "kv_bytes_per_token": 11520.0
+        },
+        {
+          "kv_format": "fp8-calibrated",
+          "ppl": 16.61832159835118,
+          "ppl_delta_pct": 0.5219913099101303,
+          "nll_delta_mean": 0.0052063365777333575,
+          "nll_delta_ci95": [
+            0.002549174338739189,
+            0.007863498816727526
+          ],
+          "kv_bytes_per_token": 11520.0
+        },
+        {
+          "kv_format": "fp8-kchannel",
+          "ppl": 16.637501543364667,
+          "ppl_delta_pct": 0.6380082165850842,
+          "nll_delta_mean": 0.00635981559753418,
+          "nll_delta_ci95": [
+            0.004084522183452249,
+            0.00863510901161611
+          ],
+          "kv_bytes_per_token": 11520.0
+        },
+        {
+          "kv_format": "int8",
+          "ppl": 16.544300599480533,
+          "ppl_delta_pct": 0.07424824746002923,
+          "nll_delta_mean": 0.0007422069708506266,
+          "nll_delta_ci95": [
+            0.0002524700060680975,
+            0.0012319439356331557
+          ],
+          "kv_bytes_per_token": 11880.0
+        },
+        {
+          "kv_format": "int8-kchannel",
+          "ppl": 16.550820118127536,
+          "ppl_delta_pct": 0.11368393853752323,
+          "nll_delta_mean": 0.0011361936728159587,
+          "nll_delta_ci95": [
+            0.0003349246519259532,
+            0.0019374626937059642
+          ],
+          "kv_bytes_per_token": 11880.0
+        }
+      ],
+      "seconds": 149.4
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "kv_layout": "Qwen/Qwen2.5-0.5B: 24 layers (24 full), 2 KV heads x 64",
+      "eval_tokens": 24576,
+      "parity": {
+        "prompts": 8,
+        "new_tokens": 32,
+        "token_match": 1.0,
+        "sequences_identical": 8
+      },
+      "results": [
+        {
+          "kv_format": "fp32",
+          "ppl": 13.984816854459448,
+          "ppl_delta_pct": 0.0,
+          "nll_delta_mean": 0.0,
+          "nll_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "kv_bytes_per_token": 24576.0
+        },
+        {
+          "kv_format": "bf16",
+          "ppl": 13.983113022610363,
+          "ppl_delta_pct": -0.01218344056140852,
+          "nll_delta_mean": -0.00012184182802836101,
+          "nll_delta_ci95": [
+            -0.00046424770994910936,
+            0.00022056405389238732
+          ],
+          "kv_bytes_per_token": 12288.0
+        },
+        {
+          "kv_format": "fp16",
+          "ppl": 13.984741486942177,
+          "ppl_delta_pct": -0.000538923877624331,
+          "nll_delta_mean": -5.389253298441569e-06,
+          "nll_delta_ci95": [
+            -5.6246956283645386e-05,
+            4.546844968676225e-05
+          ],
+          "kv_bytes_per_token": 12288.0
+        },
+        {
+          "kv_format": "fp8",
+          "ppl": 14.428922698332695,
+          "ppl_delta_pct": 3.1756286013258084,
+          "nll_delta_mean": 0.03126248220602671,
+          "nll_delta_ci95": [
+            0.025142869684545772,
+            0.03738209472750765
+          ],
+          "kv_bytes_per_token": 6144.0
+        },
+        {
+          "kv_format": "fp8-calibrated",
+          "ppl": 14.570829884693897,
+          "ppl_delta_pct": 4.190351838948692,
+          "nll_delta_mean": 0.04104934632778168,
+          "nll_delta_ci95": [
+            0.03354703555885614,
+            0.04855165709670722
+          ],
+          "kv_bytes_per_token": 6144.0
+        },
+        {
+          "kv_format": "fp8-kchannel",
+          "ppl": 14.326571093285967,
+          "ppl_delta_pct": 2.4437519803310215,
+          "nll_delta_mean": 0.024143700798352558,
+          "nll_delta_ci95": [
+            0.01959086197705634,
+            0.028696539619648777
+          ],
+          "kv_bytes_per_token": 6144.0
+        },
+        {
+          "kv_format": "int8",
+          "ppl": 14.464871255275071,
+          "ppl_delta_pct": 3.4326827859926023,
+          "nll_delta_mean": 0.03375080724557241,
+          "nll_delta_ci95": [
+            0.02755822329261621,
+            0.03994339119852861
+          ],
+          "kv_bytes_per_token": 6336.0
+        },
+        {
+          "kv_format": "int8-kchannel",
+          "ppl": 13.997424642235059,
+          "ppl_delta_pct": 0.09015339926736754,
+          "nll_delta_mean": 0.0009011278549830118,
+          "nll_delta_ci95": [
+            0.00011002824998499611,
+            0.0016922274599810276
+          ],
+          "kv_bytes_per_token": 6336.0
+        }
+      ],
+      "seconds": 537.0
+    }
+  ]
+}
