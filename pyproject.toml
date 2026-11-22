@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pagedkv"
+version = "0.1.0"
+description = "Paged KV-cache memory manager for LLM inference: block allocator with prefix caching and copy-on-write, paged attention (PyTorch reference + Triton), quantized KV, and an architecture-aware capacity estimator."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Abhay Khot" }]
+dependencies = []
+
+[project.optional-dependencies]
+# The allocator, estimator and simulator are pure Python. Attention ops and the
+# reference model need torch; Triton kernels need a CUDA build of torch.
+torch = ["torch>=2.4", "safetensors>=0.4"]
+hf = ["torch>=2.4", "safetensors>=0.4", "transformers>=5.0", "huggingface_hub>=0.23", "pyarrow>=15"]
+bench = ["numpy>=1.26", "matplotlib>=3.8", "datasets>=2.19"]
+dev = ["pytest>=8", "hypothesis>=6.100", "ruff>=0.5", "mypy>=1.10", "numpy>=1.26"]
+
+[project.scripts]
+pagedkv = "pagedkv.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pagedkv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "hf: needs transformers (meta-device or tiny random models; no downloads)",
+    "slow: downloads real model weights",
+    "gpu: needs a CUDA device",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "N", "C4", "PT"]
+ignore = ["E501", "RUF001", "RUF002", "RUF003", "N803", "N806", "N812"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/pagedkv/ops/triton_paged.py" = ["N802"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["src/pagedkv"]
+strict = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["pagedkv.ops.triton_paged"]  # @triton.jit kernels are untyped by design
+ignore_errors = true

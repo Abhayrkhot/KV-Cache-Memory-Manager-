@@ -1,0 +1,435 @@
+{
+  "workload": {
+    "source": "anon8231489123/ShareGPT_Vicuna_unfiltered (ShareGPT_V3_unfiltered_cleaned_split.json)",
+    "tokenizer": "NousResearch/Llama-2-7b-hf",
+    "filter": "first human/gpt turn; 4 <= len; prompt <= 1024; prompt + output <= 2048 (vLLM benchmark rules)",
+    "num": 10000,
+    "prompt_mean": 109.8297,
+    "prompt_median": 31.0,
+    "output_mean": 329.3663,
+    "output_median": 291.0
+  },
+  "num_requests": 2000,
+  "max_num_seqs": 256,
+  "max_model_len": 2048,
+  "paged_watermark": 0.05,
+  "scenarios": {
+    "llama-2-13b@a100-40g": {
+      "pool_tokens": 12787,
+      "allocators": {
+        "paged-16": {
+          "allocator": "paged-16",
+          "steps": 20732,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 32.466159350904604,
+          "mean_batch": 31.58060003858769,
+          "peak_batch": 103,
+          "breakdown": {
+            "token_states": 0.943538133862711,
+            "reserved": 0.0,
+            "internal_frag": 0.019042151414259047,
+            "external_frag": 0.0,
+            "free": 0.0374197147230292
+          },
+          "preemptions": 880,
+          "recomputed_tokens": 123372,
+          "prefill_tokens": 354006,
+          "prefill_tokens_skipped": 11136,
+          "saturated_steps": 19843,
+          "output_tokens_per_step": 31.58060003858769
+        },
+        "reserve-max": {
+          "allocator": "reserve-max",
+          "steps": 109433,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 6.0,
+          "mean_batch": 5.982921056719636,
+          "peak_batch": 6,
+          "breakdown": {
+            "token_states": 0.1752196687188767,
+            "reserved": 0.11643402492007023,
+            "internal_frag": 0.6693222976021477,
+            "external_frag": 0.0,
+            "free": 0.03902400875895536
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 108896,
+          "output_tokens_per_step": 5.982921056719636
+        },
+        "reserve-pow2": {
+          "allocator": "reserve-pow2",
+          "steps": 52919,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 12.462884523239099,
+          "mean_batch": 12.372285946446455,
+          "peak_batch": 23,
+          "breakdown": {
+            "token_states": 0.3632541929769769,
+            "reserved": 0.24179195231860642,
+            "internal_frag": 0.23953451166580714,
+            "external_frag": 0.1349106365476694,
+            "free": 0.02050870649091959
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 52175,
+          "output_tokens_per_step": 12.372285946446455
+        },
+        "reserve-oracle": {
+          "allocator": "reserve-oracle",
+          "steps": 38446,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 17.253134629688663,
+          "mean_batch": 17.029834052957394,
+          "peak_batch": 32,
+          "breakdown": {
+            "token_states": 0.502533173996075,
+            "reserved": 0.33472137257003376,
+            "internal_frag": 0.0,
+            "external_frag": 0.15882673316975793,
+            "free": 0.003918720264129713
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 37644,
+          "output_tokens_per_step": 17.029834052957394
+        }
+      },
+      "description": "Llama-2-13B (MHA) on A100-40GB: the vLLM paper's memory regime"
+    },
+    "llama-3.1-8b@l4-24g": {
+      "pool_tokens": 38031,
+      "allocators": {
+        "paged-16": {
+          "allocator": "paged-16",
+          "steps": 7461,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 96.36645481320726,
+          "mean_batch": 87.7535182951347,
+          "peak_batch": 256,
+          "breakdown": {
+            "token_states": 0.9446130254059746,
+            "reserved": 0.0,
+            "internal_frag": 0.019006336194320607,
+            "external_frag": 0.0,
+            "free": 0.03638063839970465
+          },
+          "preemptions": 212,
+          "recomputed_tokens": 36871,
+          "prefill_tokens": 256369,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 6451,
+          "output_tokens_per_step": 87.7535182951347
+        },
+        "reserve-max": {
+          "allocator": "reserve-max",
+          "steps": 36778,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 18.0,
+          "mean_batch": 17.80219152754364,
+          "peak_batch": 18,
+          "breakdown": {
+            "token_states": 0.17618620403450014,
+            "reserved": 0.11751244489515242,
+            "internal_frag": 0.675615857657098,
+            "external_frag": 0.0,
+            "free": 0.030685493413250636
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 36082,
+          "output_tokens_per_step": 17.80219152754364
+        },
+        "reserve-pow2": {
+          "allocator": "reserve-pow2",
+          "steps": 17365,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 39.09688350983359,
+          "mean_batch": 37.70394471638353,
+          "peak_batch": 59,
+          "breakdown": {
+            "token_states": 0.3818423659558544,
+            "reserved": 0.2551409422307807,
+            "internal_frag": 0.2523024902330068,
+            "external_frag": 0.10911943918988845,
+            "free": 0.001594762390471254
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 16525,
+          "output_tokens_per_step": 37.70394471638353
+        },
+        "reserve-oracle": {
+          "allocator": "reserve-oracle",
+          "steps": 12997,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 53.11066898781397,
+          "mean_batch": 50.375394321766564,
+          "peak_batch": 76,
+          "breakdown": {
+            "token_states": 0.5176220406136349,
+            "reserved": 0.34704319898299235,
+            "internal_frag": 0.0,
+            "external_frag": 0.13533405416397834,
+            "free": 7.062393915731948e-07
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 12063,
+          "output_tokens_per_step": 50.375394321766564
+        }
+      },
+      "description": "Llama-3.1-8B (GQA) on L4-24GB"
+    },
+    "llama-3.1-8b@a100-80g": {
+      "pool_tokens": 450907,
+      "allocators": {
+        "paged-16": {
+          "allocator": "paged-16",
+          "steps": 3310,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 0.0,
+          "mean_batch": 197.80332326283988,
+          "peak_batch": 256,
+          "breakdown": {
+            "token_states": 0.0,
+            "reserved": 0.0,
+            "internal_frag": 0.0,
+            "external_frag": 0.0,
+            "free": 0.0
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 0,
+          "output_tokens_per_step": 197.80332326283988
+        },
+        "reserve-max": {
+          "allocator": "reserve-max",
+          "steps": 3734,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 220.0,
+          "mean_batch": 175.34252811997857,
+          "peak_batch": 220,
+          "breakdown": {
+            "token_states": 0.17480427700423243,
+            "reserved": 0.123161179327594,
+            "internal_frag": 0.7012649836480378,
+            "external_frag": 0.0,
+            "free": 0.0007695600201371867
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 2745,
+          "output_tokens_per_step": 175.34252811997857
+        },
+        "reserve-pow2": {
+          "allocator": "reserve-pow2",
+          "steps": 3310,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 0.0,
+          "mean_batch": 197.80332326283988,
+          "peak_batch": 256,
+          "breakdown": {
+            "token_states": 0.0,
+            "reserved": 0.0,
+            "internal_frag": 0.0,
+            "external_frag": 0.0,
+            "free": 0.0
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 0,
+          "output_tokens_per_step": 197.80332326283988
+        },
+        "reserve-oracle": {
+          "allocator": "reserve-oracle",
+          "steps": 3310,
+          "finished_requests": 2000,
+          "output_tokens": 654729,
+          "mean_batch_saturated": 0.0,
+          "mean_batch": 197.80332326283988,
+          "peak_batch": 256,
+          "breakdown": {
+            "token_states": 0.0,
+            "reserved": 0.0,
+            "internal_frag": 0.0,
+            "external_frag": 0.0,
+            "free": 0.0
+          },
+          "preemptions": 0,
+          "recomputed_tokens": 0,
+          "prefill_tokens": 219498,
+          "prefill_tokens_skipped": 0,
+          "saturated_steps": 0,
+          "output_tokens_per_step": 197.80332326283988
+        }
+      },
+      "description": "Llama-3.1-8B on A100-80GB: memory rarely binds"
+    }
+  },
+  "block_size_sweep": {
+    "scenario": "llama-2-13b@a100-40g",
+    "pool_tokens": 12787,
+    "rows": {
+      "1": {
+        "mean_batch_saturated": 33.102689360826865,
+        "steps": 20361,
+        "internal_frag": 0.0,
+        "preemptions": 990
+      },
+      "8": {
+        "mean_batch_saturated": 32.79160739687055,
+        "steps": 20519,
+        "internal_frag": 0.00897787594048543,
+        "preemptions": 891
+      },
+      "16": {
+        "mean_batch_saturated": 32.466159350904604,
+        "steps": 20732,
+        "internal_frag": 0.019042151414259047,
+        "preemptions": 880
+      },
+      "32": {
+        "mean_batch_saturated": 31.83233946084471,
+        "steps": 21088,
+        "internal_frag": 0.03858795780788025,
+        "preemptions": 857
+      },
+      "64": {
+        "mean_batch_saturated": 30.502552950075643,
+        "steps": 21949,
+        "internal_frag": 0.07539021815773245,
+        "preemptions": 844
+      },
+      "128": {
+        "mean_batch_saturated": 28.196357427433124,
+        "steps": 23770,
+        "internal_frag": 0.1425120986251464,
+        "preemptions": 702
+      },
+      "256": {
+        "mean_batch_saturated": 24.059623625861747,
+        "steps": 27748,
+        "internal_frag": 0.2551141286936784,
+        "preemptions": 412
+      }
+    }
+  },
+  "watermark_sweep": {
+    "scenario": "llama-2-13b@a100-40g",
+    "rows": {
+      "0.0": {
+        "mean_batch_saturated": 33.216053201360964,
+        "steps": 20286,
+        "preemptions": 3864,
+        "recomputed_tokens": 386255,
+        "token_states": 0.9654480373962173
+      },
+      "0.01": {
+        "mean_batch_saturated": 33.150959905296205,
+        "steps": 20329,
+        "preemptions": 2726,
+        "recomputed_tokens": 294590,
+        "token_states": 0.9636171359394626
+      },
+      "0.02": {
+        "mean_batch_saturated": 33.01382913337431,
+        "steps": 20399,
+        "preemptions": 1943,
+        "recomputed_tokens": 230890,
+        "token_states": 0.9594674634588488
+      },
+      "0.05": {
+        "mean_batch_saturated": 32.466159350904604,
+        "steps": 20732,
+        "preemptions": 880,
+        "recomputed_tokens": 123372,
+        "token_states": 0.943538133862711
+      },
+      "0.1": {
+        "mean_batch_saturated": 31.390591450322077,
+        "steps": 21406,
+        "preemptions": 407,
+        "recomputed_tokens": 64634,
+        "token_states": 0.9126706502516228
+      },
+      "0.2": {
+        "mean_batch_saturated": 28.474408925883292,
+        "steps": 23506,
+        "preemptions": 98,
+        "recomputed_tokens": 19322,
+        "token_states": 0.8284529652590858
+      }
+    }
+  },
+  "parallel_sampling": {
+    "scenario": "llama-3.1-8b@l4-24g",
+    "n": 4,
+    "pool_tokens": 38031,
+    "allocators": {
+      "paged-16": {
+        "mean_batch_saturated": 127.12168188575069,
+        "steps": 5512,
+        "token_states": 0.952093139087124,
+        "preemptions": 1700
+      },
+      "reserve-oracle": {
+        "mean_batch_saturated": 52.89187874858162,
+        "steps": 12845,
+        "token_states": 0.528495864208241,
+        "preemptions": 0
+      }
+    }
+  },
+  "prefix_caching": {
+    "scenario": "llama-3.1-8b@l4-24g",
+    "system_prompt_tokens": 1024,
+    "num_system_prompts": 4,
+    "allocators": {
+      "paged-16": {
+        "mean_batch_saturated": 89.97351739681645,
+        "steps": 8004,
+        "prefill_tokens": 2565187,
+        "prefill_tokens_skipped": 2322496,
+        "preemptions": 272
+      },
+      "paged-16-nocache": {
+        "mean_batch_saturated": 25.828788889324805,
+        "steps": 26275,
+        "prefill_tokens": 2245585,
+        "prefill_tokens_skipped": 0,
+        "preemptions": 3
+      }
+    }
+  }
+}

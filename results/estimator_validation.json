@@ -1,0 +1,292 @@
+{
+  "transformers_version": "5.24.0",
+  "note": "sliding layers: HF stores window-1 tokens between steps; estimator counts the window",
+  "rows": [
+    {
+      "model": "deepseek-v3",
+      "hf_repo": "deepseek-ai/DeepSeek-V3",
+      "description": "deepseek-v3: 61 layers (61 mla), latent dim 576",
+      "seq_len": 300,
+      "hf_cache_bytes": 21081600,
+      "estimator_bytes": 21081600.0,
+      "bytes_per_token_bf16": 70272.0,
+      "per_layer_match": true,
+      "params": 671026404352
+    },
+    {
+      "model": "gemma-2-9b",
+      "hf_repo": "unsloth/gemma-2-9b",
+      "description": "gemma-2-9b: 42 layers (21 full, 21 sliding), 8 KV heads x 256, window 4096",
+      "seq_len": 300,
+      "hf_cache_bytes": 103219200,
+      "estimator_bytes": 103219200.0,
+      "bytes_per_token_bf16": 344064.0,
+      "per_layer_match": true,
+      "params": 9241705984
+    },
+    {
+      "model": "gemma-2-9b",
+      "hf_repo": "unsloth/gemma-2-9b",
+      "description": "gemma-2-9b: 42 layers (21 full, 21 sliding), 8 KV heads x 256, window 4096",
+      "seq_len": 4396,
+      "hf_cache_bytes": 1460723712,
+      "estimator_bytes": 1460895744.0,
+      "bytes_per_token_bf16": 344064.0,
+      "per_layer_match": true,
+      "params": 9241705984
+    },
+    {
+      "model": "gemma-3-27b",
+      "hf_repo": "unsloth/gemma-3-27b-it",
+      "description": "gemma-3-27b: 62 layers (10 full, 52 sliding), 16 KV heads x 128, window 1024",
+      "seq_len": 300,
+      "hf_cache_bytes": 152371200,
+      "estimator_bytes": 152371200.0,
+      "bytes_per_token_bf16": 507904.0,
+      "per_layer_match": true,
+      "params": 27432406640
+    },
+    {
+      "model": "gemma-3-27b",
+      "hf_repo": "unsloth/gemma-3-27b-it",
+      "description": "gemma-3-27b: 62 layers (10 full, 52 sliding), 16 KV heads x 128, window 1024",
+      "seq_len": 1324,
+      "hf_cache_bytes": 544243712,
+      "estimator_bytes": 544669696.0,
+      "bytes_per_token_bf16": 507904.0,
+      "per_layer_match": true,
+      "params": 27432406640
+    },
+    {
+      "model": "glm-4.7",
+      "hf_repo": "zai-org/GLM-4.7",
+      "description": "glm-4.7: 92 layers (92 full), 8 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 113049600,
+      "estimator_bytes": 113049600.0,
+      "bytes_per_token_bf16": 376832.0,
+      "per_layer_match": true,
+      "params": 352797814784
+    },
+    {
+      "model": "gpt-oss-120b",
+      "hf_repo": "openai/gpt-oss-120b",
+      "description": "gpt-oss-120b: 36 layers (18 full, 18 sliding), 8 KV heads x 64, window 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 15740928,
+      "estimator_bytes": 15777792.0,
+      "bytes_per_token_bf16": 73728.0,
+      "per_layer_match": true,
+      "params": 116829156672
+    },
+    {
+      "model": "gpt-oss-120b",
+      "hf_repo": "openai/gpt-oss-120b",
+      "description": "gpt-oss-120b: 36 layers (18 full, 18 sliding), 8 KV heads x 64, window 128",
+      "seq_len": 428,
+      "hf_cache_bytes": 20459520,
+      "estimator_bytes": 20496384.0,
+      "bytes_per_token_bf16": 73728.0,
+      "per_layer_match": true,
+      "params": 116829156672
+    },
+    {
+      "model": "gpt-oss-20b",
+      "hf_repo": "openai/gpt-oss-20b",
+      "description": "gpt-oss-20b: 24 layers (12 full, 12 sliding), 8 KV heads x 64, window 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 10493952,
+      "estimator_bytes": 10518528.0,
+      "bytes_per_token_bf16": 49152.0,
+      "per_layer_match": true,
+      "params": 20914757184
+    },
+    {
+      "model": "gpt-oss-20b",
+      "hf_repo": "openai/gpt-oss-20b",
+      "description": "gpt-oss-20b: 24 layers (12 full, 12 sliding), 8 KV heads x 64, window 128",
+      "seq_len": 428,
+      "hf_cache_bytes": 13639680,
+      "estimator_bytes": 13664256.0,
+      "bytes_per_token_bf16": 49152.0,
+      "per_layer_match": true,
+      "params": 20914757184
+    },
+    {
+      "model": "granite-4.0-h-tiny",
+      "hf_repo": "ibm-granite/granite-4.0-h-tiny",
+      "description": "granite-4.0-h-tiny: 40 layers (4 full, 36 none), 4 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 2457600,
+      "estimator_bytes": 2457600.0,
+      "bytes_per_token_bf16": 8192.0,
+      "per_layer_match": true,
+      "params": 6939037248
+    },
+    {
+      "model": "jamba-tiny-dev",
+      "hf_repo": "ai21labs/Jamba-tiny-dev",
+      "description": "jamba-tiny-dev: 16 layers (2 full, 14 none), 2 KV heads x 64",
+      "seq_len": 300,
+      "hf_cache_bytes": 307200,
+      "estimator_bytes": 307200.0,
+      "bytes_per_token_bf16": 1024.0,
+      "per_layer_match": true,
+      "params": 318688640
+    },
+    {
+      "model": "kimi-k2",
+      "hf_repo": "moonshotai/Kimi-K2-Instruct",
+      "description": "kimi-k2: 61 layers (61 mla), latent dim 576",
+      "seq_len": 300,
+      "hf_cache_bytes": 21081600,
+      "estimator_bytes": 21081600.0,
+      "bytes_per_token_bf16": 70272.0,
+      "per_layer_match": true,
+      "params": 1026408209408
+    },
+    {
+      "model": "lfm2.5-1.2b",
+      "hf_repo": "LiquidAI/LFM2.5-1.2B-Instruct",
+      "description": "lfm2.5-1.2b: 16 layers (6 full, 10 none), 8 KV heads x 64",
+      "seq_len": 300,
+      "hf_cache_bytes": 3686400,
+      "estimator_bytes": 3686400.0,
+      "bytes_per_token_bf16": 12288.0,
+      "per_layer_match": true,
+      "params": 1170340608
+    },
+    {
+      "model": "llama-2-13b",
+      "hf_repo": "NousResearch/Llama-2-13b-hf",
+      "description": "llama-2-13b: 40 layers (40 full), 40 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 245760000,
+      "estimator_bytes": 245760000.0,
+      "bytes_per_token_bf16": 819200.0,
+      "per_layer_match": true,
+      "params": 13015864320
+    },
+    {
+      "model": "llama-2-70b",
+      "hf_repo": "NousResearch/Llama-2-70b-hf",
+      "description": "llama-2-70b: 80 layers (80 full), 8 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 98304000,
+      "estimator_bytes": 98304000.0,
+      "bytes_per_token_bf16": 327680.0,
+      "per_layer_match": true,
+      "params": 68976648192
+    },
+    {
+      "model": "llama-2-7b",
+      "hf_repo": "NousResearch/Llama-2-7b-hf",
+      "description": "llama-2-7b: 32 layers (32 full), 32 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 157286400,
+      "estimator_bytes": 157286400.0,
+      "bytes_per_token_bf16": 524288.0,
+      "per_layer_match": true,
+      "params": 6738415616
+    },
+    {
+      "model": "llama-3.1-70b",
+      "hf_repo": "unsloth/Meta-Llama-3.1-70B",
+      "description": "llama-3.1-70b: 80 layers (80 full), 8 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 98304000,
+      "estimator_bytes": 98304000.0,
+      "bytes_per_token_bf16": 327680.0,
+      "per_layer_match": true,
+      "params": 70553706496
+    },
+    {
+      "model": "llama-3.1-8b",
+      "hf_repo": "unsloth/Meta-Llama-3.1-8B",
+      "description": "llama-3.1-8b: 32 layers (32 full), 8 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 39321600,
+      "estimator_bytes": 39321600.0,
+      "bytes_per_token_bf16": 131072.0,
+      "per_layer_match": true,
+      "params": 8030261248
+    },
+    {
+      "model": "mistral-7b-v0.1",
+      "hf_repo": "HuggingFaceH4/zephyr-7b-beta",
+      "description": "mistral-7b-v0.1: 32 layers (32 sliding), 8 KV heads x 128, window 4096",
+      "seq_len": 300,
+      "hf_cache_bytes": 39321600,
+      "estimator_bytes": 39321600.0,
+      "bytes_per_token_bf16": 131072.0,
+      "per_layer_match": true,
+      "params": 7241732096
+    },
+    {
+      "model": "mistral-7b-v0.1",
+      "hf_repo": "HuggingFaceH4/zephyr-7b-beta",
+      "description": "mistral-7b-v0.1: 32 layers (32 sliding), 8 KV heads x 128, window 4096",
+      "seq_len": 4396,
+      "hf_cache_bytes": 536739840,
+      "estimator_bytes": 536870912.0,
+      "bytes_per_token_bf16": 131072.0,
+      "per_layer_match": true,
+      "params": 7241732096
+    },
+    {
+      "model": "qwen2.5-0.5b",
+      "hf_repo": "Qwen/Qwen2.5-0.5B",
+      "description": "qwen2.5-0.5b: 24 layers (24 full), 2 KV heads x 64",
+      "seq_len": 300,
+      "hf_cache_bytes": 3686400,
+      "estimator_bytes": 3686400.0,
+      "bytes_per_token_bf16": 12288.0,
+      "per_layer_match": true,
+      "params": 494032768
+    },
+    {
+      "model": "qwen2.5-72b",
+      "hf_repo": "Qwen/Qwen2.5-72B-Instruct",
+      "description": "qwen2.5-72b: 80 layers (80 full), 8 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 98304000,
+      "estimator_bytes": 98304000.0,
+      "bytes_per_token_bf16": 327680.0,
+      "per_layer_match": true,
+      "params": 72706203648
+    },
+    {
+      "model": "qwen2.5-7b",
+      "hf_repo": "Qwen/Qwen2.5-7B-Instruct",
+      "description": "qwen2.5-7b: 28 layers (28 full), 4 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 17203200,
+      "estimator_bytes": 17203200.0,
+      "bytes_per_token_bf16": 57344.0,
+      "per_layer_match": true,
+      "params": 7615616512
+    },
+    {
+      "model": "qwen3-32b",
+      "hf_repo": "Qwen/Qwen3-32B",
+      "description": "qwen3-32b: 64 layers (64 full), 8 KV heads x 128",
+      "seq_len": 300,
+      "hf_cache_bytes": 78643200,
+      "estimator_bytes": 78643200.0,
+      "bytes_per_token_bf16": 262144.0,
+      "per_layer_match": true,
+      "params": 32762123264
+    },
+    {
+      "model": "smollm2-135m",
+      "hf_repo": "HuggingFaceTB/SmolLM2-135M",
+      "description": "smollm2-135m: 30 layers (30 full), 3 KV heads x 64",
+      "seq_len": 300,
+      "hf_cache_bytes": 6912000,
+      "estimator_bytes": 6912000.0,
+      "bytes_per_token_bf16": 23040.0,
+      "per_layer_match": true,
+      "params": 134515008
+    }
+  ]
+}

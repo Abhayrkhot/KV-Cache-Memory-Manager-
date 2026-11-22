@@ -1,0 +1,318 @@
+{
+  "tokens": 1024,
+  "source": "WikiText-2 test, first 1,024 tokens",
+  "models": {
+    "HuggingFaceTB/SmolLM2-135M": {
+      "worst": [
+        {
+          "layer": 18,
+          "max_over_median": 7.957284450531006,
+          "key_absmax": 26.36656951904297
+        },
+        {
+          "layer": 28,
+          "max_over_median": 5.594412803649902,
+          "key_absmax": 15.86945629119873
+        },
+        {
+          "layer": 15,
+          "max_over_median": 5.198882102966309,
+          "key_absmax": 19.36818504333496
+        }
+      ],
+      "all": [
+        {
+          "layer": 0,
+          "max_over_median": 3.343925714492798,
+          "key_absmax": 10.105835914611816
+        },
+        {
+          "layer": 1,
+          "max_over_median": 4.112187385559082,
+          "key_absmax": 15.71001148223877
+        },
+        {
+          "layer": 2,
+          "max_over_median": 4.822186470031738,
+          "key_absmax": 16.208881378173828
+        },
+        {
+          "layer": 3,
+          "max_over_median": 3.980945348739624,
+          "key_absmax": 14.897868156433105
+        },
+        {
+          "layer": 4,
+          "max_over_median": 3.73232102394104,
+          "key_absmax": 14.306191444396973
+        },
+        {
+          "layer": 5,
+          "max_over_median": 3.635782480239868,
+          "key_absmax": 14.119464874267578
+        },
+        {
+          "layer": 6,
+          "max_over_median": 4.60813570022583,
+          "key_absmax": 17.42458724975586
+        },
+        {
+          "layer": 7,
+          "max_over_median": 4.284621715545654,
+          "key_absmax": 16.287641525268555
+        },
+        {
+          "layer": 8,
+          "max_over_median": 4.101675510406494,
+          "key_absmax": 17.070463180541992
+        },
+        {
+          "layer": 9,
+          "max_over_median": 4.280965328216553,
+          "key_absmax": 16.669591903686523
+        },
+        {
+          "layer": 10,
+          "max_over_median": 4.994955062866211,
+          "key_absmax": 21.04102325439453
+        },
+        {
+          "layer": 11,
+          "max_over_median": 4.356101036071777,
+          "key_absmax": 18.475738525390625
+        },
+        {
+          "layer": 12,
+          "max_over_median": 4.720970153808594,
+          "key_absmax": 17.800376892089844
+        },
+        {
+          "layer": 13,
+          "max_over_median": 4.429778575897217,
+          "key_absmax": 19.58767318725586
+        },
+        {
+          "layer": 14,
+          "max_over_median": 4.7855448722839355,
+          "key_absmax": 15.962387084960938
+        },
+        {
+          "layer": 15,
+          "max_over_median": 5.198882102966309,
+          "key_absmax": 19.36818504333496
+        },
+        {
+          "layer": 16,
+          "max_over_median": 4.22401237487793,
+          "key_absmax": 17.477127075195312
+        },
+        {
+          "layer": 17,
+          "max_over_median": 4.691749572753906,
+          "key_absmax": 16.643375396728516
+        },
+        {
+          "layer": 18,
+          "max_over_median": 7.957284450531006,
+          "key_absmax": 26.36656951904297
+        },
+        {
+          "layer": 19,
+          "max_over_median": 4.897765636444092,
+          "key_absmax": 18.250558853149414
+        },
+        {
+          "layer": 20,
+          "max_over_median": 4.276528835296631,
+          "key_absmax": 14.469796180725098
+        },
+        {
+          "layer": 21,
+          "max_over_median": 3.7453646659851074,
+          "key_absmax": 14.984835624694824
+        },
+        {
+          "layer": 22,
+          "max_over_median": 4.38095760345459,
+          "key_absmax": 18.55455780029297
+        },
+        {
+          "layer": 23,
+          "max_over_median": 4.539268970489502,
+          "key_absmax": 15.968790054321289
+        },
+        {
+          "layer": 24,
+          "max_over_median": 4.239430904388428,
+          "key_absmax": 15.832905769348145
+        },
+        {
+          "layer": 25,
+          "max_over_median": 4.259384632110596,
+          "key_absmax": 16.985448837280273
+        },
+        {
+          "layer": 26,
+          "max_over_median": 4.149448871612549,
+          "key_absmax": 16.861467361450195
+        },
+        {
+          "layer": 27,
+          "max_over_median": 4.785935878753662,
+          "key_absmax": 18.191814422607422
+        },
+        {
+          "layer": 28,
+          "max_over_median": 5.594412803649902,
+          "key_absmax": 15.86945629119873
+        },
+        {
+          "layer": 29,
+          "max_over_median": 4.015643119812012,
+          "key_absmax": 15.033122062683105
+        }
+      ]
+    },
+    "Qwen/Qwen2.5-0.5B": {
+      "worst": [
+        {
+          "layer": 8,
+          "max_over_median": 44.468650817871094,
+          "key_absmax": 218.84945678710938
+        },
+        {
+          "layer": 1,
+          "max_over_median": 32.49687576293945,
+          "key_absmax": 150.3592071533203
+        },
+        {
+          "layer": 0,
+          "max_over_median": 15.51555347442627,
+          "key_absmax": 130.49639892578125
+        }
+      ],
+      "all": [
+        {
+          "layer": 0,
+          "max_over_median": 15.51555347442627,
+          "key_absmax": 130.49639892578125
+        },
+        {
+          "layer": 1,
+          "max_over_median": 32.49687576293945,
+          "key_absmax": 150.3592071533203
+        },
+        {
+          "layer": 2,
+          "max_over_median": 10.96121883392334,
+          "key_absmax": 63.95980453491211
+        },
+        {
+          "layer": 3,
+          "max_over_median": 5.010788440704346,
+          "key_absmax": 26.733659744262695
+        },
+        {
+          "layer": 4,
+          "max_over_median": 4.869787693023682,
+          "key_absmax": 19.713010787963867
+        },
+        {
+          "layer": 5,
+          "max_over_median": 3.366650342941284,
+          "key_absmax": 14.503009796142578
+        },
+        {
+          "layer": 6,
+          "max_over_median": 2.3847193717956543,
+          "key_absmax": 10.791281700134277
+        },
+        {
+          "layer": 7,
+          "max_over_median": 3.1914801597595215,
+          "key_absmax": 13.915510177612305
+        },
+        {
+          "layer": 8,
+          "max_over_median": 44.468650817871094,
+          "key_absmax": 218.84945678710938
+        },
+        {
+          "layer": 9,
+          "max_over_median": 4.4969635009765625,
+          "key_absmax": 16.427379608154297
+        },
+        {
+          "layer": 10,
+          "max_over_median": 3.6601996421813965,
+          "key_absmax": 17.270998001098633
+        },
+        {
+          "layer": 11,
+          "max_over_median": 4.291049957275391,
+          "key_absmax": 17.68279266357422
+        },
+        {
+          "layer": 12,
+          "max_over_median": 3.0786092281341553,
+          "key_absmax": 11.642664909362793
+        },
+        {
+          "layer": 13,
+          "max_over_median": 3.076927900314331,
+          "key_absmax": 12.835201263427734
+        },
+        {
+          "layer": 14,
+          "max_over_median": 3.9417037963867188,
+          "key_absmax": 16.829465866088867
+        },
+        {
+          "layer": 15,
+          "max_over_median": 3.3717920780181885,
+          "key_absmax": 13.720976829528809
+        },
+        {
+          "layer": 16,
+          "max_over_median": 2.86407470703125,
+          "key_absmax": 14.442051887512207
+        },
+        {
+          "layer": 17,
+          "max_over_median": 2.993091344833374,
+          "key_absmax": 13.47030258178711
+        },
+        {
+          "layer": 18,
+          "max_over_median": 2.9526538848876953,
+          "key_absmax": 13.796205520629883
+        },
+        {
+          "layer": 19,
+          "max_over_median": 3.2148756980895996,
+          "key_absmax": 15.722282409667969
+        },
+        {
+          "layer": 20,
+          "max_over_median": 3.96298885345459,
+          "key_absmax": 19.020198822021484
+        },
+        {
+          "layer": 21,
+          "max_over_median": 4.094599723815918,
+          "key_absmax": 16.36080551147461
+        },
+        {
+          "layer": 22,
+          "max_over_median": 3.1147589683532715,
+          "key_absmax": 12.210830688476562
+        },
+        {
+          "layer": 23,
+          "max_over_median": 3.6607604026794434,
+          "key_absmax": 13.836504936218262
+        }
+      ]
+    }
+  }
+}
